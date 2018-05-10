@@ -1,9 +1,8 @@
 const Sequelize = require("sequelize");
-
 const sequelize = new Sequelize("sqlite:quizzes.sqlite", {logging: false});
-
 const fs = require("fs");
 let quizzes = [];
+
 
 sequelize.define('quiz', {
 	id: {
@@ -17,16 +16,21 @@ sequelize.define('quiz', {
 	},
 	answer: {
 		type: Sequelize.STRING,
-		calidate: {notEmpty: {msg: "La pregunta no puede estar vacia"}}
+		calidate: {notEmpty: {msg: "La pregunta no puede esta vacia"}}
 	}
 });
+
+
 
 sequelize.sync()
 .then(() => sequelize.models.quiz.count())
 .then(count => {
 	if(!count) {
 		return sequelize.models.quiz.bulkCreate([
-			{id: 0, question: "Capital de Italia", answer: "Roma" }
+			{id=0, question: "Capital de Italia", answer: "Roma" }
+			    {question: "Capital de Francia", answer: "París"},
+                {question: "Capital de España", answer: "Madrid"},
+                {question: "Capital de Portugal", answer: "Lisboa"}
 		]);
 	}
 })
@@ -78,7 +82,13 @@ exports.update = (id, question, answer) => {
 	save();
 };
 
+
+
 exports.getAll = () => quizzes;
+
+
+
+
 
 exports.getByIndex = id => {
 	const quiz = quizzes[id];
