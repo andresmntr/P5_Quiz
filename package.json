@@ -1,27 +1,26 @@
 {
-  "name": "P5_Quiz",
-  "version": "1.0.0",
-  "description": "Práctica Quiz",
+  "name": "p5-quiz",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
-  "keywords": [
-    "quiz",
-    "core",
-    "node"
-  ],
-  "author": "Andres",
-  "license": "Unlicense",
   "dependencies": {
-    "chalk": "^2.3.2",
-    "ejs": "~2.5.7",
-    "figlet": "^1.2.0",
-    "sequelize": "^4.37.1",
-    "sqlite3": "^4.0.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
-    "express": "~4.16.0",
+    "ejs": "~2.5.7",
+    "express": "^4.16.3",
     "http-errors": "~1.6.2",
-    "morgan": "~1.9.0"
-  }
+    "morgan": "~1.9.0",
+    "sequelize": "^4.37.7",
+    "sqlite3": "^4.0.0"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "P5_Quiz"
+  },
+  "author": "andres",
+  "license": "ISC",
+  "description": ""
 }
