@@ -17,7 +17,7 @@
     "ejs": "~2.5.7",
     "figlet": "^1.2.0",
     "sequelize": "^4.37.1",
-    "sqlite3": "^3.1.13",
+    "sqlite3": "^4.0.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
