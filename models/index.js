@@ -17,7 +17,7 @@ sequelize.define('quiz', {
 	},
 	answer: {
 		type: Sequelize.STRING,
-		calidate: {notEmpty: {msg: "La pregunta no puede estar vacia"}}
+		validate: {notEmpty: {msg: "La pregunta no puede estar vacia"}}
 	}
 });
 

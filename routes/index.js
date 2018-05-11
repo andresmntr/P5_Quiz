@@ -1,6 +1,7 @@
 
 const Sequelize = require("sequelize");
 const {models} = require("../models/index.js");
+const quizCtrl = require('../controllers/quiz');
 var express = require('express');
 var router = express.Router();
 
@@ -13,12 +14,8 @@ router.get('/credits', (req, res, next) => {
 	res.render('credits', {title: "P5_QUIZ", name: "Andres Montero"});
 });
 
-router.get('/quizzes', (requ, res, next) => {
-	models.quiz.findAll().then( (quizzes) => {
-		res.render('quizzes', {quizzes});
-	})
-	.catch(error => {
-	});
+router.get('/quizzes', (req, res, next) => {
+	  quizCtrl.index(req,res,next);
 });
 
 module.exports = router;
